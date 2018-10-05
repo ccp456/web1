@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>{{ title }} - blog </title>
-</head>
-<body>
-    <h1>hello, {{ user.username }}</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+    {% block content %}
+        <h3>你凝视着深渊时，深渊也在凝视着你——尼采《善恶的彼岸》</h3>
+        <p>你好，{{user.username}}</p>
+    {% endblock %}
