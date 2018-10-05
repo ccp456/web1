@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
     {% block content %}
         <h3>你凝视着深渊时，深渊也在凝视着你——尼采《善恶的彼岸》</h3>
-        <p>你好，{{user.username}}</p>
+        <p>与恶龙缠斗过久，自身亦成为恶龙。</p>
+        <p>受束缚的心灵，自由精神——当一个人紧紧束缚自己的心灵，囚禁自己的
+            心灵时，会听凭自己的思想享有许多自由；我以前曾说过这一点。但我这样说人们不会相信除非人们有亲身的体验。</p>
+        <p style="text-align:center"><a href="{{ url_for('main') }}">enter</a></p>
     {% endblock %}

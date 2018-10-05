@@ -3,11 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <title>{{ title }} - 1096chan </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="{{ url_for('static', filename='cookies.js') }}"></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
     <h1>星星之火，可以燎原</h1>
+    <p>
+    {% if request.cookies.get('name') %}
+        你的cookie <b style="color:aqua">{{request.cookies.get('name')}}</b> 
+        {% else %}
+        <a href="javascript:void(0);" onclick="setcookie()"> 点击获取cookie </a>
+        {% endif %}
     {% block content %}
-
+    </p>
     {% endblock %}
 </body>

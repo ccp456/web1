@@ -1,15 +1,18 @@
 from app import app
-from flask import render_template,url_for,make_response,request
+from flask import render_template,url_for,make_response,Request,Response
 
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username' : 'Clonwpiece'}
-    return render_template('index.html',title='mine',user=user)
+    return render_template('index.html')
+
+@app.route('/main')
+def main():
+    return("hello world")
 
 
-@app.route('/set_cookie')
-def set_cookie():
-    resp=make_response('Hello World')
-    resp.set_cookie('Name','Hyman')
-    return resp
+
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
